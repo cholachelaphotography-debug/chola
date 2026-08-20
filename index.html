@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chola Chela Photography — Kitchen Party, Wedding &amp; Ichilanga Mulilo Photography in Zambia</title>
+<meta name="description" content="Chola Chela Photography — full-day photography and videography coverage for Kitchen Parties, Weddings, Ichilanga Mulilo and every ceremony in between. Based in Kitwe, Zambia.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%23241512%22/><circle cx=%2250%22 cy=%2250%22 r=%2222%22 fill=%22none%22 stroke=%22%23C9A44C%22 stroke-width=%226%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#221512;
+    --ink-soft:#3a2620;
+    --ember:#B8451F;
+    --ember-soft:#d8623a;
+    --gold:#C9A44C;
+    --gold-soft:#e4c684;
+    --cream:#F5EEE0;
+    --paper:#FBF7EE;
+    --wine:#54101F;
+    --green:#1F4034;
+    --line: rgba(34,21,18,0.14);
+    --shadow: 0 20px 50px -25px rgba(34,21,18,0.45);
+    --radius: 2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:450;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    font-size:12px;
+    color:var(--ember);
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    padding:20px 0;
+    transition:background .35s ease, padding .35s ease, box-shadow .35s ease;
+  }
+  header.scrolled{
+    background:rgba(251,247,238,0.92);
+    backdrop-filter:blur(10px);
+    padding:12px 0;
+    box-shadow:0 1px 0 var(--line);
+  }
+  nav.wrap{display:flex; align-items:center; justify-content:space-between;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-size:19px; letter-spacing:0.01em;}
+  .brand .mark{
+    width:34px; height:34px; border-radius:50%;
+    border:1.5px solid var(--ink); position:relative; flex:none;
+  }
+  .brand .mark::after{
+    content:""; position:absolute; inset:8px; border:1.5px solid var(--gold);
+  }
+  .navlinks{display:flex; gap:34px; align-items:center;}
+  .navlinks a{font-size:14px; letter-spacing:0.02em; position:relative; padding:4px 0;}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--ember);transition:width .3s ease;}
+  .navlinks a:hover::after{width:100%;}
+  .navcta{
+    border:1px solid var(--ink); padding:9px 18px; font-size:13px;
+    font-family:'IBM Plex Mono',monospace; letter-spacing:0.03em;
+    transition:background .25s ease,color .25s ease;
+  }
+  .navcta:hover{background:var(--ink); color:var(--paper);}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:6px;}
+  .burger span{width:24px; height:1.5px; background:var(--ink); display:block;}
+  .mobile-menu{
+    display:none; position:fixed; inset:0; background:var(--ink); z-index:99;
+    flex-direction:column; align-items:center; justify-content:center; gap:28px;
+  }
+  .mobile-menu a{color:var(--cream); font-family:'Fraunces',serif; font-size:28px;}
+  .mobile-menu.open{display:flex;}
+  @media(max-width:880px){
+    .navlinks, .navcta{display:none;}
+    .burger{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:168px 0 90px;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse 900px 500px at 85% -10%, rgba(201,164,76,0.18), transparent 60%),
+      radial-gradient(ellipse 700px 500px at -10% 110%, rgba(184,69,31,0.12), transparent 60%);
+  }
+  .hero .wrap{display:grid; grid-template-columns:1.15fr 0.85fr; gap:70px; align-items:end;}
+  .hero h1{
+    font-size:clamp(40px, 6vw, 76px);
+    line-height:0.98;
+    font-weight:450;
+  }
+  .hero h1 em{font-style:italic; color:var(--ember);}
+  .hero-sub{margin-top:26px; max-width:440px; font-size:17px; color:var(--ink-soft);}
+  .hero-ctas{display:flex; gap:14px; margin-top:38px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 26px; font-size:14px; font-family:'IBM Plex Mono',monospace;
+    letter-spacing:0.02em; border:1px solid var(--ink); transition:all .25s ease;
+  }
+  .btn.solid{background:var(--ink); color:var(--paper);}
+  .btn.solid:hover{background:var(--ember); border-color:var(--ember);}
+  .btn.ghost:hover{background:var(--ink); color:var(--paper);}
+  .hero-meta{
+    font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--ink-soft);
+    display:flex; flex-direction:column; gap:8px; text-align:right;
+  }
+  .hero-frame{
+    aspect-ratio:4/5; border:1px solid var(--line); position:relative;
+    overflow:hidden;
+    background:#221512;
+  }
+  .hero-frame img{width:100%; height:100%; object-fit:cover; display:block;}
+  .hero-frame .tag{
+    position:absolute; bottom:-1px; left:-1px; background:var(--gold); color:var(--ink);
+    font-family:'IBM Plex Mono',monospace; font-size:11px; padding:8px 14px; letter-spacing:0.04em; z-index:2;
+  }
+  @media(max-width:880px){
+    .hero .wrap{grid-template-columns:1fr; gap:44px;}
+    .hero-meta{flex-direction:row; justify-content:space-between; text-align:left;}
+    .hero{padding-top:130px;}
+  }
+
+  /* ---------- JOURNEY STRIP (signature element) ---------- */
+  .journey{
+    background:var(--ink); color:var(--cream); padding:64px 0 70px;
+  }
+  .journey .eyebrow{color:var(--gold-soft);}
+  .journey h2{color:var(--paper); font-size:clamp(26px,3vw,34px); margin-top:10px; max-width:560px;}
+  .journey-path{
+    margin-top:52px; display:grid; grid-template-columns:repeat(3,1fr); gap:0; position:relative;
+  }
+  .journey-path::before{
+    content:""; position:absolute; top:19px; left:8%; right:8%; height:1px;
+    background:repeating-linear-gradient(90deg, var(--gold) 0 10px, transparent 10px 20px);
+  }
+  .jstep{padding:0 22px; position:relative;}
+  .jstep .thumb{
+    width:100%; aspect-ratio:5/4; overflow:hidden; margin-bottom:22px; border:1px solid rgba(201,164,76,0.4); position:relative;
+  }
+  .jstep .thumb img{width:100%; height:100%; object-fit:cover; display:block; filter:grayscale(15%);}
+  .jstep .dot{
+    width:34px; height:34px; border-radius:50%; background:var(--ink); border:1px solid var(--gold);
+    display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace;
+    font-size:12px; color:var(--gold); margin-bottom:20px; position:relative; z-index:2;
+  }
+  .jstep h3{font-size:22px; color:var(--paper); margin-bottom:10px;}
+  .jstep p{font-size:14.5px; color:rgba(245,238,224,0.65); max-width:280px;}
+  @media(max-width:780px){
+    .journey-path{grid-template-columns:1fr; gap:36px;}
+    .journey-path::before{display:none;}
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:92px 0;}
+  .section-head{max-width:620px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(30px,4vw,44px); margin-top:12px;}
+  .section-head p{margin-top:16px; color:var(--ink-soft); font-size:16px;}
+
+  /* ---------- ABOUT ---------- */
+  .about .wrap{display:grid; grid-template-columns:0.8fr 1.2fr; gap:70px;}
+  .about-frame{aspect-ratio:3/4; position:relative; border:1px solid var(--line); overflow:hidden;}
+  .about-frame img{width:100%; height:100%; object-fit:cover; display:block;}
+  .about-copy p{font-size:17px; color:var(--ink-soft); max-width:560px;}
+  .about-copy p + p{margin-top:18px;}
+  .about-stats{display:flex; gap:44px; margin-top:40px; flex-wrap:wrap;}
+  .about-stats div strong{display:block; font-family:'Fraunces',serif; font-size:34px;}
+  .about-stats div span{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); letter-spacing:0.04em;}
+  @media(max-width:880px){.about .wrap{grid-template-columns:1fr;}}
+
+  /* ---------- PORTFOLIO ---------- */
+  .portfolio-group{margin-bottom:54px;}
+  .portfolio-group:last-child{margin-bottom:0;}
+  .pg-head{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:20px; gap:20px; flex-wrap:wrap;}
+  .pg-head h3{font-size:24px;}
+  .pg-head span{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); letter-spacing:0.04em;}
+  .pg-strip{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:14px;}
+  .pg-strip a{display:block; aspect-ratio:4/5; overflow:hidden; border:1px solid var(--line); position:relative;}
+  .pg-strip a:first-child{aspect-ratio:auto;}
+  .pg-strip img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease;}
+  .pg-strip a:hover img{transform:scale(1.045);}
+  @media(max-width:780px){.pg-strip{grid-template-columns:1fr 1fr;} .pg-strip a:first-child{grid-column:1/-1; aspect-ratio:16/10;}}
+
+  /* ---------- LIFESTYLE / PORTRAITS ---------- */
+  .lifestyle{background:var(--cream);}
+  .life-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .life-card{background:var(--paper); display:flex; flex-direction:column;}
+  .life-card .ph{aspect-ratio:3/4; overflow:hidden;}
+  .life-card .ph img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease;}
+  .life-card:hover .ph img{transform:scale(1.05);}
+  .life-card .lc-body{padding:20px 18px; flex:1; display:flex; flex-direction:column;}
+  .life-card h4{font-size:18px; margin-bottom:8px;}
+  .life-card p{font-size:13.5px; color:var(--ink-soft); flex:1;}
+  .life-card .pick{
+    margin-top:16px; text-align:center; padding:10px; font-family:'IBM Plex Mono',monospace; font-size:12px;
+    border:1px solid var(--ink); letter-spacing:0.02em; transition:background .2s ease,color .2s ease;
+  }
+  .life-card .pick:hover{background:var(--ink); color:var(--paper);}
+  @media(max-width:980px){.life-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.life-grid{grid-template-columns:1fr;}}
+
+  /* ---------- PRICING ---------- */
+  .pricing{background:var(--cream);}
+  .cat-tabs{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:44px;}
+  .cat-tab{
+    font-family:'IBM Plex Mono',monospace; font-size:13px; padding:10px 18px;
+    border:1px solid var(--ink); cursor:pointer; background:transparent; letter-spacing:0.02em;
+    transition:background .2s ease,color .2s ease;
+  }
+  .cat-tab.active, .cat-tab:hover{background:var(--ink); color:var(--paper);}
+  .cat-panel{display:none;}
+  .cat-panel.active{display:block; animation:fadein .4s ease;}
+  @keyframes fadein{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
+  .cat-intro{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:30px;}
+  .cat-intro p{max-width:520px; color:var(--ink-soft);}
+  .mode-toggle{
+    display:flex; border:1px solid var(--ink); font-family:'IBM Plex Mono',monospace; font-size:12.5px; flex:none;
+  }
+  .mode-toggle button{
+    background:none; border:none; padding:10px 16px; cursor:pointer; color:var(--ink);
+  }
+  .mode-toggle button.active{background:var(--ink); color:var(--paper);}
+  .pkg-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .pkg{background:var(--paper); padding:28px 22px; display:flex; flex-direction:column;}
+  .pkg .tier{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--ember);}
+  .pkg .price{font-family:'Fraunces',serif; font-size:34px; margin-top:10px;}
+  .pkg .price sup{font-family:'IBM Plex Mono',monospace; font-size:14px; top:-14px; position:relative; margin-right:2px; color:var(--ink-soft);}
+  .pkg ul{list-style:none; margin:20px 0 0; padding:0; font-size:13.5px; color:var(--ink-soft); flex:1;}
+  .pkg li{padding:8px 0; border-top:1px solid var(--line); display:flex; gap:8px;}
+  .pkg li:first-child{border-top:none;}
+  .pkg li::before{content:"—"; color:var(--gold); flex:none;}
+  .pkg.featured{background:var(--ink); color:var(--paper);}
+  .pkg.featured .tier{color:var(--gold-soft);}
+  .pkg.featured li{border-color:rgba(245,238,224,0.15); color:rgba(245,238,224,0.75);}
+  .pkg .pick{
+    margin-top:22px; text-align:center; padding:11px; font-family:'IBM Plex Mono',monospace; font-size:12.5px;
+    border:1px solid var(--ink); letter-spacing:0.03em; transition:background .2s ease,color .2s ease;
+  }
+  .pkg.featured .pick{border-color:var(--gold);}
+  .pkg .pick:hover{background:var(--ink); color:var(--paper);}
+  .pkg.featured .pick:hover{background:var(--gold); color:var(--ink);}
+  @media(max-width:980px){.pkg-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.pkg-grid{grid-template-columns:1fr;}}
+
+  /* ---------- OTHER PACKAGES ---------- */
+  .other-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:10px;}
+  .other-card{background:var(--paper); padding:30px;}
+  .other-card h4{font-size:19px; margin-bottom:14px;}
+  .other-card table{width:100%; border-collapse:collapse; font-size:13.5px;}
+  .other-card td{padding:9px 0; border-top:1px solid var(--line); vertical-align:top;}
+  .other-card tr:first-child td{border-top:none;}
+  .other-card td.tname{color:var(--ink-soft);}
+  .other-card td.tprice{font-family:'IBM Plex Mono',monospace; text-align:right; white-space:nowrap;}
+  .signing{margin-top:1px; background:var(--wine); color:var(--cream); padding:30px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .signing h4{color:var(--paper); font-size:19px;}
+  .signing p{font-size:13.5px; color:rgba(245,238,224,0.7); margin-top:6px;}
+  .signing .price{font-family:'Fraunces',serif; font-size:30px;}
+  @media(max-width:780px){.other-grid{grid-template-columns:1fr;}}
+
+  /* ---------- PROCESS ---------- */
+  .process{background:var(--green); color:var(--cream);}
+  .process .eyebrow{color:var(--gold-soft);}
+  .process h2{color:var(--paper);}
+  .process-list{margin-top:44px; border-top:1px solid rgba(245,238,224,0.2);}
+  .p-row{
+    display:grid; grid-template-columns:70px 1fr 1fr; gap:24px; padding:24px 0;
+    border-bottom:1px solid rgba(245,238,224,0.2); align-items:baseline;
+  }
+  .p-row .num{font-family:'IBM Plex Mono',monospace; color:var(--gold-soft); font-size:13px;}
+  .p-row h4{font-size:20px; color:var(--paper);}
+  .p-row p{font-size:14px; color:rgba(245,238,224,0.68);}
+  @media(max-width:700px){.p-row{grid-template-columns:1fr; gap:8px;}}
+
+  /* ---------- TERMS ---------- */
+  .terms-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:2px 40px;}
+  .terms-grid div{padding:16px 0; border-top:1px solid var(--line); font-size:14.5px; color:var(--ink-soft); display:flex; gap:12px;}
+  .terms-grid div::before{content:"§"; color:var(--ember); font-family:'IBM Plex Mono',monospace; flex:none;}
+  @media(max-width:780px){.terms-grid{grid-template-columns:1fr;}}
+
+  /* ---------- CONTACT / PAYMENT ---------- */
+  .contact{background:var(--ink); color:var(--cream);}
+  .contact .eyebrow{color:var(--gold-soft);}
+  .contact h2{color:var(--paper);}
+  .contact .wrap{display:grid; grid-template-columns:1fr 1fr; gap:70px;}
+  .contact-cta p{color:rgba(245,238,224,0.68); max-width:420px; margin-top:16px;}
+  .contact-channels{margin-top:34px; display:flex; flex-direction:column; gap:14px;}
+  .channel{
+    display:flex; justify-content:space-between; align-items:center; padding:16px 0;
+    border-top:1px solid rgba(245,238,224,0.18);
+  }
+  .channel .label{font-family:'IBM Plex Mono',monospace; font-size:12px; color:rgba(245,238,224,0.55); letter-spacing:0.05em;}
+  .channel .val{font-family:'Fraunces',serif; font-size:19px; margin-top:4px;}
+  .channel .go{border:1px solid var(--gold); color:var(--gold-soft); padding:8px 16px; font-family:'IBM Plex Mono',monospace; font-size:12px; transition:.2s;}
+  .channel .go:hover{background:var(--gold); color:var(--ink);}
+  .pay-card{background:rgba(245,238,224,0.05); border:1px solid rgba(245,238,224,0.18); padding:32px;}
+  .pay-card h3{color:var(--paper); font-size:20px; margin-bottom:20px;}
+  .pay-line{display:flex; justify-content:space-between; padding:10px 0; border-top:1px solid rgba(245,238,224,0.12); font-size:14px;}
+  .pay-line:first-of-type{border-top:none;}
+  .pay-line span:first-child{color:rgba(245,238,224,0.55);}
+  .pay-line span:last-child{font-family:'IBM Plex Mono',monospace;}
+  .pay-sub{margin-top:26px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.1em; color:var(--gold-soft); text-transform:uppercase;}
+  @media(max-width:880px){.contact .wrap{grid-template-columns:1fr; gap:48px;}}
+
+  footer{padding:34px 0; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft); background:var(--paper); border-top:1px solid var(--line);}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a href="#top" class="brand"><span class="mark"></span>Chola Chela Photography</a>
+    <div class="navlinks">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Packages</a>
+      <a href="#lifestyle">Portraits</a>
+      <a href="#terms">Terms</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="navcta">Book a date</a>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#portfolio">Portfolio</a>
+  <a href="#pricing">Packages</a>
+  <a href="#lifestyle">Portraits</a>
+  <a href="#terms">Terms</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div id="top"></div>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Kitwe, Zambia — Full-day coverage</span>
+      <h1>Every ceremony,<br>told <em>properly.</em></h1>
+      <p class="hero-sub">From the first plate at the Kitchen Party to the fire at Ichilanga Mulilo to the vows at the altar — Chola Chela Photography documents the whole story of a Zambian wedding, not just the highlight reel.</p>
+      <div class="hero-ctas">
+        <a href="#pricing" class="btn solid">See packages</a>
+        <a href="#contact" class="btn ghost">Check availability</a>
+      </div>
+    </div>
+    <div class="hero-frame">
+      <img src="images/wedding-hero.jpg" alt="Bride laughing with guests at a Chola Chela Photography wedding">
+      <span class="tag">Chola Chela Photography</span>
+    </div>
+  </div>
+</section>
+
+<section class="journey" id="ceremonies">
+  <div class="wrap">
+    <span class="eyebrow">The Zambian wedding journey</span>
+    <h2 class="reveal">Three ceremonies. One thread of photographs running through all of them.</h2>
+    <div class="journey-path">
+      <div class="jstep reveal">
+        <div class="thumb"><img src="images/kitchen-1.jpg" alt="Bridal party in colourful gowns at a Kitchen Party"></div>
+        <div class="dot">01</div><h3>Kitchen Party</h3><p>The bridal party in full colour — gifts, dancing, and the aunties running the room. Coverage built for a room that never sits still.</p>
+      </div>
+      <div class="jstep reveal">
+        <div class="thumb"><img src="images/ichilanga-2.jpg" alt="Couple in traditional attire at an Ichilanga Mulilo ceremony"></div>
+        <div class="dot">02</div><h3>Ichilanga Mulilo</h3><p>The traditional fire-lighting ceremony. Quiet ritual and loud celebration in the same afternoon, covered without getting in the way.</p>
+      </div>
+      <div class="jstep reveal">
+        <div class="thumb"><img src="images/wedding-4.jpg" alt="Bride arriving at her wedding in a full veil and gown"></div>
+        <div class="dot">03</div><h3>Wedding Day</h3><p>Bridal make-up through to the last dance. The formal portraits and the unposed moments in between.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="about-frame"><img src="images/portrait-golden.jpg" alt="Portrait session at golden hour by Chola Chela Photography"></div>
+    <div class="about-copy">
+      <span class="eyebrow">About the studio</span>
+      <h2 style="font-size:clamp(28px,3.4vw,38px); margin-top:12px; margin-bottom:22px;">Photography built around how Zambian weddings actually unfold.</h2>
+      <p>Chola Chela Photography was built on a simple observation: a Zambian wedding isn't one event, it's several — each with its own dress code, its own choreography, and its own kind of chaos. Every package on this site is priced and built around a specific ceremony, not a generic "wedding day."</p>
+      <p>Every booking includes full-day coverage, a photo session with the couple or celebrant, and a private online gallery for delivery — no CDs, no waiting at the studio.</p>
+      <div class="about-stats">
+        <div><strong>10</strong><span>working days to photo delivery</span></div>
+        <div><strong>4</strong><span>ceremony categories covered</span></div>
+        <div><strong>450</strong><span>edited photos on Platinum tiers</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Recent work</span>
+      <h2>A closer look at each ceremony.</h2>
+      <p>A small selection from real Kitchen Parties, Ichilanga Mulilo ceremonies and weddings we've covered.</p>
+    </div>
+
+    <div class="portfolio-group reveal">
+      <div class="pg-head"><h3>Kitchen Party</h3><span>Bridal party coverage</span></div>
+      <div class="pg-strip">
+        <a href="images/kitchen-1.jpg" target="_blank"><img src="images/kitchen-1.jpg" alt="Bride surrounded by family in colourful attire at a Kitchen Party"></a>
+        <a href="images/ichilanga-3.jpg" target="_blank"><img src="images/ichilanga-3.jpg" alt="Bride-to-be taking part in a traditional kitchen task"></a>
+        <a href="images/wedding-3.jpg" target="_blank"><img src="images/wedding-3.jpg" alt="Detail shot of wedding rings and shoes"></a>
+      </div>
+    </div>
+
+    <div class="portfolio-group reveal">
+      <div class="pg-head"><h3>Ichilanga Mulilo</h3><span>Traditional fire-lighting ceremony</span></div>
+      <div class="pg-strip">
+        <a href="images/ichilanga-1.jpg" target="_blank"><img src="images/ichilanga-1.jpg" alt="Bride in traditional beaded attire for Ichilanga Mulilo"></a>
+        <a href="images/ichilanga-2.jpg" target="_blank"><img src="images/ichilanga-2.jpg" alt="Couple in traditional green and white attire"></a>
+        <a href="images/ichilanga-4.jpg" target="_blank"><img src="images/ichilanga-4.jpg" alt="Black and white portrait from a traditional ceremony"></a>
+      </div>
+    </div>
+
+    <div class="portfolio-group reveal">
+      <div class="pg-head"><h3>Wedding Day</h3><span>Full-day coverage</span></div>
+      <div class="pg-strip">
+        <a href="images/wedding-hero.jpg" target="_blank"><img src="images/wedding-hero.jpg" alt="Joyful bride greeting guests at her wedding"></a>
+        <a href="images/wedding-2.jpg" target="_blank"><img src="images/wedding-2.jpg" alt="Close-up of bridal make-up application"></a>
+        <a href="images/wedding-4.jpg" target="_blank"><img src="images/wedding-4.jpg" alt="Bride in full gown and veil arriving at her wedding"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Charge list — 2026</span>
+      <h2>Pick the ceremony, then the tier.</h2>
+      <p>Every category comes in four tiers — Basic, Standard, Premium and Platinum — and two formats: photography only, or photography with full videography. All prices in Zambian Kwacha (K).</p>
+    </div>
+
+    <div class="cat-tabs" id="catTabs"></div>
+    <div id="catPanels"></div>
+  </div>
+</section>
+
+<section class="other" id="other">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Beyond the big three</span>
+      <h2>Customised packages for every other kind of "I do."</h2>
+      <p>Church blessings, council marriages, and same-day combinations — built for couples doing more than one ceremony in a single trip to Kitwe.</p>
+    </div>
+    <div id="otherGrid" class="other-grid"></div>
+    <div class="signing">
+      <div>
+        <h4>Council Signing Ceremony — Photography</h4>
+        <p>50 soft copy-edited photos · Full signing coverage · Photo session · Online delivery. Videography add-on: K1,000.</p>
+      </div>
+      <div class="price">K1,500</div>
+    </div>
+  </div>
+</section>
+
+<section class="lifestyle" id="lifestyle">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Beyond weddings</span>
+      <h2>Portrait &amp; lifestyle sessions.</h2>
+      <p>Graduations, outdoor and editorial shoots, corporate portraits, and maternity sessions — booked separately from the wedding packages above, priced to the brief.</p>
+    </div>
+    <div class="life-grid">
+      <div class="life-card">
+        <div class="ph"><img src="images/portrait-graduation.jpg" alt="Graduate in cap and gown studio portrait"></div>
+        <div class="lc-body">
+          <h4>Graduation</h4>
+          <p>Studio or on-campus portraits marking the day the gown and stole finally make sense.</p>
+          <a href="#contact" class="pick">Get a quote</a>
+        </div>
+      </div>
+      <div class="life-card">
+        <div class="ph"><img src="images/portrait-outdoor.jpg" alt="Editorial outdoor fashion portrait in a red coat"></div>
+        <div class="lc-body">
+          <h4>Outdoor &amp; Editorial</h4>
+          <p>Location-based fashion and lifestyle sessions built around light, wardrobe, and story.</p>
+          <a href="#contact" class="pick">Get a quote</a>
+        </div>
+      </div>
+      <div class="life-card">
+        <div class="ph"><img src="images/portrait-corporate.jpg" alt="Corporate lifestyle outdoor portrait"></div>
+        <div class="lc-body">
+          <h4>Corporate</h4>
+          <p>Headshots and lifestyle portraits for professionals, teams, and personal branding.</p>
+          <a href="#contact" class="pick">Get a quote</a>
+        </div>
+      </div>
+      <div class="life-card">
+        <div class="ph"><img src="images/portrait-maternity.jpg" alt="Maternity portrait session in a garden"></div>
+        <div class="lc-body">
+          <h4>Maternity</h4>
+          <p>Gentle, unhurried sessions for parents-to-be, timed around the due date.</p>
+          <a href="#contact" class="pick">Get a quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <span class="eyebrow">How a booking works</span>
+    <h2 class="reveal" style="margin-top:12px;">Four steps, from enquiry to delivered gallery.</h2>
+    <div class="process-list">
+      <div class="p-row reveal"><span class="num">01</span><h4>Enquire &amp; choose a package</h4><p>Tell us the ceremony, the date, and the tier you're leaning toward — we'll confirm what's included.</p></div>
+      <div class="p-row reveal"><span class="num">02</span><h4>Secure the date</h4><p>A 50% non-refundable deposit locks in your date. The balance is due one week before the event.</p></div>
+      <div class="p-row reveal"><span class="num">03</span><h4>We shoot the day</h4><p>Full-day coverage, on-site, with a photo session built into the schedule.</p></div>
+      <div class="p-row reveal"><span class="num">04</span><h4>Gallery delivered</h4><p>Edited photos within 10 working days, video within 10–15, both via a private online gallery.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="terms" id="terms">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The fine print</span>
+      <h2>Terms &amp; conditions</h2>
+      <p>The short version — full detail lives in the vendor contract sent at booking.</p>
+    </div>
+    <div class="terms-grid" id="termsGrid"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-cta">
+      <span class="eyebrow">Get in touch</span>
+      <h2 style="margin-top:12px;">Let's put a date on the calendar.</h2>
+      <p>Message us on WhatsApp, call, or send your event details — we'll reply with a package recommendation and availability.</p>
+      <div class="contact-channels">
+        <div class="channel">
+          <div><div class="label">Airtel / WhatsApp</div><div class="val">+260 976 683 351</div></div>
+          <a class="go" href="https://wa.me/260976683351" target="_blank" rel="noopener">Message</a>
+        </div>
+        <div class="channel">
+          <div><div class="label">MTN</div><div class="val">+260 966 080 108</div></div>
+          <a class="go" href="tel:+260966080108">Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="pay-card">
+      <h3>Payment details</h3>
+      <div class="pay-line"><span>Bank</span><span>First National Bank</span></div>
+      <div class="pay-line"><span>Account name</span><span>Elias Chola Chela</span></div>
+      <div class="pay-line"><span>Account number</span><span>63049968176</span></div>
+      <div class="pay-line"><span>Branch</span><span>Kitwe, Mukuba Mall</span></div>
+      <div class="pay-line"><span>Airtel Money</span><span>0976 683 351</span></div>
+      <div class="pay-line"><span>MTN MoMo</span><span>0966 080 108</span></div>
+      <div class="pay-sub">50% deposit secures your date · balance due 7 days prior</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Chola Chela Photography, Kitwe, Zambia. Copyright of all images is retained by the photographer.
+</footer>
+
+<script>
+/* ---------------- DATA ---------------- */
+const CATEGORIES = [
+  {
+    id:"kitchen", label:"Kitchen Party", intro:"Bridal party coverage — colourful, high-energy, full of guests.",
+    photo:[
+      {tier:"Basic", price:3000, items:["100 soft copy-edited photos","Full day coverage (no make-up session)","Photo session","Online photo delivery/access"]},
+      {tier:"Standard", price:3500, items:["150 soft copy-edited photos","Full day coverage (no make-up session)","Photo session","Online photo delivery/access"]},
+      {tier:"Premium", price:4000, items:["200 soft copy-edited photos","Full day coverage from bridal make-up","Photo session","Online photo delivery/access"]},
+      {tier:"Platinum", price:4500, items:["250 soft copy-edited photos","Full day coverage from bridal make-up","Photo session","Online photo delivery/access"]}
+    ],
+    combo:[
+      {tier:"Basic", price:5000, items:["100 soft copy-edited photos","Full event video + photo session","Full day coverage (no make-up session)","Online photo delivery/access"]},
+      {tier:"Standard", price:5500, items:["150 soft copy-edited photos","Full event video + photo session","Full day coverage (no make-up session)","Online photo delivery/access"]},
+      {tier:"Premium", price:6500, items:["200 soft copy-edited photos","Full event video, trailer + photo session","Full day coverage from bridal make-up","Online photo delivery/access"]},
+      {tier:"Platinum", price:7000, items:["250 soft copy-edited photos","Full event video, trailer + photo session","Full day coverage from bridal make-up","Online photo delivery/access"]}
+    ]
+  },
+  {
+    id:"wedding", label:"Wedding Day", intro:"The main event — bridal make-up through to the last dance.",
+    photo:[
+      {tier:"Basic", price:4000, items:["200 soft copy-edited photos","Full day coverage (no make-up session)","Photo session","Online photo delivery/access"]},
+      {tier:"Standard", price:4500, items:["250 soft copy-edited photos","Full day coverage (no make-up session)","Photo session","Online photo delivery/access"]},
+      {tier:"Premium", price:5000, items:["300 soft copy-edited photos","Full day coverage from bridal make-up","Photo session","Online photo delivery/access"]},
+      {tier:"Platinum", price:6000, items:["450 soft copy-edited photos","Full day coverage from bridal make-up","Photo session","Online photo delivery/access"]}
+    ],
+    combo:[
+      {tier:"Basic", price:6500, items:["200 soft copy-edited photos","Full event video + photo session","Full day coverage (no make-up session)","Online photo delivery/access"]},
+      {tier:"Standard", price:7500, items:["250 soft copy-edited photos","Full event video + photo session","Full day coverage (no make-up session)","Online photo delivery/access"]},
+      {tier:"Premium", price:8500, items:["300 soft copy-edited photos","Full event video, trailer + photo session","Full day coverage from bridal make-up","Online photo delivery/access"]},
+      {tier:"Platinum", price:9500, items:["450 soft copy-edited photos","Full event video, trailer + photo session","Full day coverage from bridal make-up","Online photo delivery/access"]}
+    ]
+  },
+  {
+    id:"ichilanga", label:"Ichilanga Mulilo", intro:"The traditional fire-lighting ceremony, covered start to finish.",
+    photo:[
+      {tier:"Basic", price:3000, items:["150 soft copy-edited photos","Full day coverage (no make-up session)","Photo session","Online photo delivery/access"]},
+      {tier:"Standard", price:3500, items:["200 soft copy-edited photos","Full day coverage (no make-up session)","Photo session","Online photo delivery/access"]},
+      {tier:"Premium", price:4000, items:["250 soft copy-edited photos","Full day coverage from bridal make-up","Photo session","Online photo delivery/access"]},
+      {tier:"Platinum", price:4500, items:["300 soft copy-edited photos","Full day coverage from bridal make-up","Photo session","Online photo delivery/access"]}
+    ],
+    combo:[
+      {tier:"Basic", price:4500, items:["150 soft copy-edited photos","Full event video + photo session","Full day coverage (no make-up session)","Online photo delivery/access"]},
+      {tier:"Standard", price:5000, items:["200 soft copy-edited photos","Full event video + photo session","Full day coverage (no make-up session)","Online photo delivery/access"]},
+      {tier:"Premium", price:5500, items:["250 soft copy-edited photos","Full event video, trailer + photo session","Full day coverage including make-up session","Online photo delivery/access"]},
+      {tier:"Platinum", price:6000, items:["300 soft copy-edited photos","Full event video, trailer + photo session","Full day coverage including make-up session","Online photo delivery/access"]}
+    ]
+  }
+];
+
+const OTHER = [
+  {
+    name:"Church Blessing / Council Marriage",
+    sub:"Photography only",
+    rows:[["Basic",2500],["Standard",3000],["Premium",3500],["Platinum",4000]]
+  },
+  {
+    name:"Church Blessing / Council Marriage",
+    sub:"Photography &amp; videography",
+    rows:[["Basic",4000],["Standard",4500],["Premium",5000],["Platinum",5000]]
+  },
+  {
+    name:"Combined Church/Council + Ichilanga Mulilo",
+    sub:"Same day — photography only",
+    rows:[["Basic",5000],["Standard",5500],["Premium",6000],["Platinum",7000]]
+  },
+  {
+    name:"Combined Church/Council + Ichilanga Mulilo",
+    sub:"Same day — photography &amp; videography",
+    rows:[["Basic",7000],["Standard",7500],["Premium",8000],["Platinum",9000]]
+  }
+];
+
+const TERMS = [
+  "50% non-refundable deposit to secure your booking; full payment due one week before the event.",
+  "Cancellations or rescheduling must be made at least 7 days prior — late changes may forfeit the deposit.",
+  "Copyright is retained by the photographer; clients receive personal usage rights for non-commercial use.",
+  "Photos delivered within 10 working days, video within 10–15 working days, via a secure online gallery.",
+  "Basic editing and retouching is included; extensive retouching applies to 10 photos chosen by the photographer.",
+  "Clients must ensure venue access and cooperate with the photographer's requirements on the day.",
+  "Clients are responsible for obtaining consent for any individuals or locations featured.",
+  "Additional services — extra shooters, photo books, framed prints — are available at extra cost.",
+  "In severe weather or equipment failure, an alternative solution will be sought where possible.",
+  "Transportation costs are not included and depend on the event location."
+];
+
+/* ---------------- RENDER ---------------- */
+const fmt = n => "K" + n.toLocaleString();
+
+function pkgCard(p, featured){
+  return `<div class="pkg ${featured?'featured':''}">
+    <span class="tier">${p.tier}</span>
+    <div class="price"><sup>K</sup>${p.price.toLocaleString()}</div>
+    <ul>${p.items.map(i=>`<li>${i}</li>`).join("")}</ul>
+    <a href="#contact" class="pick">Enquire</a>
+  </div>`;
+}
+
+const tabsEl = document.getElementById("catTabs");
+const panelsEl = document.getElementById("catPanels");
+
+CATEGORIES.forEach((cat, i) => {
+  tabsEl.insertAdjacentHTML("beforeend",
+    `<button class="cat-tab ${i===0?'active':''}" data-cat="${cat.id}">${cat.label}</button>`);
+
+  panelsEl.insertAdjacentHTML("beforeend", `
+    <div class="cat-panel ${i===0?'active':''}" id="panel-${cat.id}">
+      <div class="cat-intro">
+        <p>${cat.intro}</p>
+        <div class="mode-toggle" data-cat="${cat.id}">
+          <button class="active" data-mode="photo">Photography only</button>
+          <button data-mode="combo">Photography + Video</button>
+        </div>
+      </div>
+      <div class="pkg-grid" data-mode-target="photo">
+        ${cat.photo.map((p,idx)=>pkgCard(p, idx===3)).join("")}
+      </div>
+      <div class="pkg-grid" data-mode-target="combo" style="display:none;">
+        ${cat.combo.map((p,idx)=>pkgCard(p, idx===3)).join("")}
+      </div>
+    </div>
+  `);
+});
+
+tabsEl.addEventListener("click", e=>{
+  const btn = e.target.closest(".cat-tab");
+  if(!btn) return;
+  document.querySelectorAll(".cat-tab").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  document.querySelectorAll(".cat-panel").forEach(p=>p.classList.remove("active"));
+  document.getElementById("panel-"+btn.dataset.cat).classList.add("active");
+});
+
+panelsEl.addEventListener("click", e=>{
+  const btn = e.target.closest(".mode-toggle button");
+  if(!btn) return;
+  const toggle = btn.closest(".mode-toggle");
+  toggle.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  const panel = toggle.closest(".cat-panel");
+  panel.querySelectorAll(".pkg-grid").forEach(g=>{
+    g.style.display = (g.dataset.modeTarget === btn.dataset.mode) ? "grid" : "none";
+  });
+});
+
+/* other packages */
+const otherGrid = document.getElementById("otherGrid");
+OTHER.forEach(card=>{
+  otherGrid.insertAdjacentHTML("beforeend", `
+    <div class="other-card">
+      <h4>${card.name}<br><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ember);text-transform:uppercase;letter-spacing:.08em;">${card.sub}</span></h4>
+      <table>${card.rows.map(r=>`<tr><td class="tname">${r[0]}</td><td class="tprice">${fmt(r[1])}</td></tr>`).join("")}</table>
+    </div>
+  `);
+});
+
+/* terms */
+const termsGrid = document.getElementById("termsGrid");
+TERMS.forEach(t=> termsGrid.insertAdjacentHTML("beforeend", `<div>${t}</div>`));
+
+/* nav scroll state */
+const header = document.getElementById("site-header");
+window.addEventListener("scroll", ()=>{
+  header.classList.toggle("scrolled", window.scrollY > 40);
+});
+
+/* mobile menu */
+const burger = document.getElementById("burger");
+const mobileMenu = document.getElementById("mobileMenu");
+burger.addEventListener("click", ()=> mobileMenu.classList.toggle("open"));
+mobileMenu.querySelectorAll("a").forEach(a=> a.addEventListener("click", ()=> mobileMenu.classList.remove("open")));
+
+/* reveal on scroll */
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+},{threshold:0.2});
+document.querySelectorAll(".reveal").forEach(el=> io.observe(el));
+</script>
+</body>
+</html>
